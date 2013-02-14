@@ -1,0 +1,11 @@
+%ul#nav
+  %li{:class=>"#{request.path=='/' ? 'active' : ''}"}
+    %a{:href=>'/'}
+      %span= "Home"
+  %li{:class=>"#{@current=='products' ? 'active' : ''}"}
+    %a{:href=>'/activities'}
+      %span= "Actions"
+    %a{:href=>'http://junnuthula.wordpress.com/'}
+      %span= "Blog"
+    %a{:href => "http://www.123contactform.com/form-493466/Contact-Form"} 
+      %span= "Contact Us"

@@ -1,0 +1,18 @@
+#footer
+  .footer_links
+    .fwc
+      - ["Home"].each do |item| 
+        %a{:href=>'/'}= item.titleize
+      - ["Contact Us"].each do |item| 
+        %a{:href => "http://www.123contactform.com/form-493466/Contact-Form"}= item.titleize
+      - ["Activities"].each do |item|
+        %a{:href=>'/activities'}= item.titleize
+      - ["About Us", "Faqs", "Partners And Operators", "Privacy Policy", "Terms And Conditions"].each do |item|
+      - url = '/pages/' + item.gsub(' ', '').underscore
+        %a{:href=>url}= item.titleize
+      
+       
+  #copy
+    .fwc
+      &copy; 2000 - 2020, #{link_to 'Exura.in', 'http://localhost:3000/'}, All rights reserved.
+
