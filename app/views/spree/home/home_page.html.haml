@@ -35,6 +35,8 @@
       = submit_tag "Go!", :name => nil, :class=>"btn"
 #carousel
   %h2 Browse Actitvities
+  %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} &lsaquo;
+  %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} &rsaquo;
   .car_wrapper
     - Spree::Taxon.all_activity_types.each do |act|
       - if act.active_activities_count > 0
@@ -81,8 +83,10 @@
   -#   .right_col
   .right_col
     %div{"data-hook" => "homepage_featured_products"}
-      %h3
-        Featured Activities
+      %br
+      %br
+      %br
+      %br
       - @featured.each do |pr|
         - @product = pr
         %a.box{:href=>url_for(@product), :title=>"#{@product.name} | #{@product.location}"}

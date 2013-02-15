@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
+  revision: 85f25fa9d04cf22af4879c7696c9fe7226220802
+  specs:
+    twitter-bootstrap-rails (2.2.3)
+      actionpack (>= 3.1)
+      execjs
+      railties (>= 3.1)
+
+GIT
   remote: git://github.com/spree/spree_auth_devise
   revision: ecf7626cd463e18142ae704459f3cd49b4d9da30
   specs:
@@ -61,6 +70,8 @@ GEM
       activesupport (= 3.2.8)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-postgresql-adapter (0.0.1)
+      pg
     activeresource (3.2.8)
       activemodel (= 3.2.8)
       activesupport (= 3.2.8)
@@ -106,6 +117,8 @@ GEM
       railties (~> 3.1)
       warden (~> 1.1.1)
     erubis (2.7.0)
+    exception_notification (3.0.1)
+      actionmailer (>= 3.0.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faker (1.1.2)
@@ -196,6 +209,7 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
+    pg (0.14.1)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -320,11 +334,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-postgresql-adapter
   annotate
   bluecloth
   cocoon
   coffee-rails (~> 3.2.1)
   compass-rails
+  devise
+  exception_notification
   faker
   feedzirra
   formtastic
@@ -332,6 +349,7 @@ DEPENDENCIES
   haml
   jquery-rails
   mysql2
+  paperclip
   progress_bar
   railroady
   rails (= 3.2.8)
@@ -345,5 +363,6 @@ DEPENDENCIES
   sunspot_rails (>= 2.0.0.pre.120925)
   sunspot_solr
   therubyracer
+  twitter-bootstrap-rails!
   uglifier (>= 1.0.3)
   zen-grids
